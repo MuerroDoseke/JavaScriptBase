@@ -1,17 +1,14 @@
 // 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100. 
 
-let numbers = 2;
-while (numbers < 100) {
-    let check = true;
-    for (let i = 2; i < numbers; i++){
-        if (numbers%i === 0) {
-            check = false;
-            break;
-        }
-    }
-}
-    if (check) console.log(numbers);
-    numbers++;         
+simpleNumber:
+for (var i = 2; i < 100; i++) {
+
+  for (var j = 2; j < i; j++) {
+    if (i % j == 0) continue simpleNumber;
+  }
+
+  console.log(i);
+}       
 
 
 // 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины
